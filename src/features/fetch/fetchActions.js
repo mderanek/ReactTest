@@ -28,6 +28,8 @@ export const fetchLaunchData = () => {
           launchData: launchData,
         })
       );
-    } catch (error) {}
+    } catch (error) {
+      console.log("Error when fetching data");
+    }
   };
 };
