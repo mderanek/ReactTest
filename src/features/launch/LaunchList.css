@@ -8,14 +8,6 @@ img {
     width:75%;
 }
 
-table {
-    font-size: 100%;
-    width:100%;
-    background-color: white;
-    table-layout: fixed;
-    display: flexbox;
-}
-
 input {
     display: inline;
     width: 100%;

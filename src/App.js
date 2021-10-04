@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchLaunchData } from "./features/fetch/fetchActions";
-import { LaunchList } from "./features/fetch/LaunchList";
+import { fetchLaunchData } from "./features/launch/LaunchActions";
+import { LaunchList } from "./features/launch/LaunchList";
 import "./App.css";
 
 function App() {

@@ -1,16 +1,16 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./LaunchList.css";
-import { fetchAct } from "./fetchSlice";
+import { launchAct } from "./LaunchSlice";
 
 export const LaunchList = () => {
   // Gather all of our filters and data from our store
   const dispatch = useDispatch();
-  const launches = useSelector((state) => state.fetch.launchData);
-  var nameFilter = useSelector((state) => state.fetch.nameFilter);
-  var dateFilter = useSelector((state) => state.fetch.dateFilter);
-  var launchFilter = useSelector((state) => state.fetch.launchFilter);
-  var landFilter = useSelector((state) => state.fetch.landFilter);
+  const launches = useSelector((state) => state.launch.launchData);
+  var nameFilter = useSelector((state) => state.launch.nameFilter);
+  var dateFilter = useSelector((state) => state.launch.dateFilter);
+  var launchFilter = useSelector((state) => state.launch.launchFilter);
+  var landFilter = useSelector((state) => state.launch.landFilter);
 
   // Use our filters to get data that we want to show
   var filteredLaunches = launches.filter(
@@ -26,7 +26,7 @@ export const LaunchList = () => {
   // Function used to call reducer to store new filters
   function updateFilters() {
     dispatch(
-      fetchAct.updateFilters({
+      launchAct.updateFilters({
         nameFilter: nameFilter,
         dateFilter: dateFilter,
         launchFilter: launchFilter,

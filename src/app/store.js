@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import fetchSlice from '../features/fetch/fetchSlice';
+import launchSlice from '../features/launch/LaunchSlice';
 
 export const store = configureStore({
   reducer: {
-    fetch: fetchSlice.reducer,
+    launch: launchSlice.reducer,
   },
 });

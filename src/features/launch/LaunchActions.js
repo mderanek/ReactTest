@@ -1,4 +1,4 @@
-import { fetchAct } from "./fetchSlice";
+import { launchAct } from "./LaunchSlice";
 
 // Call the API for the initial pull of data
 // JSON extracted and then stored in store using dispatch
@@ -24,7 +24,7 @@ export const fetchLaunchData = () => {
 
       // Store the JSON in the store
       dispatch(
-        fetchAct.fetchList({
+        launchAct.fetchList({
           launchData: launchData,
         })
       );

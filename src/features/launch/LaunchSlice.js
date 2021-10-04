@@ -12,8 +12,8 @@ const initialState = {
 // 2 Reducers to store with --
 // FetchList stores our entire list of data -- called from fetchAction
 // updateFilters stores our filters -- called from LaunchList
-export const fetchSlice = createSlice({
-  name: "fetch",
+export const launchSlice = createSlice({
+  name: "launch",
   initialState,
   reducers: {
     fetchList: (state, action) => {
@@ -29,7 +29,7 @@ export const fetchSlice = createSlice({
 });
 
 // export actions for other components and selectData for useSelectors
-export const fetchAct = fetchSlice.actions;
+export const launchAct = launchSlice.actions;
 export const selectData = (state) => state.launchData;
 
-export default fetchSlice;
+export default launchSlice;
